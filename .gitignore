@@ -1,0 +1,10 @@
+## ignore all files and folders
+/*
+/*/
+
+##
+!/.gitignore
+!/.vimrc
+!/.tmux.conf
+!/.config/i3/
+
