@@ -11,14 +11,14 @@ if has('win32')
 endif
 
 color industry
+set timeoutlen=400
 set number relativenumber nocursorline
 set ts=4 sw=4 sts=4 autoindent smartindent expandtab smarttab
 set ignorecase smartcase incsearch hlsearch showmatch
 set enc=utf-8 fenc=utf-8
 set mouse=a clipboard=unnamedplus
 set wrap linebreak iskeyword+=- backspace=indent,eol,start
-set timeoutlen=400
-set nobackup
+set nobackup nowritebackup noswapfile
 
 let mapleader = " "
 let localmapleader = " "
@@ -29,15 +29,14 @@ nmap K <Nop>
 "nmap <C-s> <Nop>
 "nmap <C-a> <Nop>
 nnoremap <silent> <C-q><C-s> :write<CR>
-nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <C-q><C-x> :q!<CR>
+nnoremap <silent> <leader>w :w<CR>
+nnoremap <silent> <leader>x :bd!<CR>
 nnoremap <silent> <leader>fe :e .<CR>
-nnoremap <silent> <leader>,oo :e $MYVIMRC<CR>
-nnoremap <silent> <leader>,ll :so $MYVIMRC<CR>
+nnoremap <leader>oo :e $MYVIMRC<CR>
+nnoremap <leader>ll :so $MYVIMRC<CR>
 
 " Buffer
-nnoremap <silent> <leader>x :bd!<CR>
-"nnoremap <silent> Q :bd!<CR>
 nnoremap > :bn<CR>
 nnoremap < :bp<CR>
 nnoremap <C-Tab> :b#<CR>
