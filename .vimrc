@@ -40,7 +40,7 @@ nnoremap <silent> <leader>x :bd!<CR>
 "nnoremap <silent> Q :bd!<CR>
 nnoremap > :bn<CR>
 nnoremap < :bp<CR>
-nnoremap <Tab> :b#<CR>
+nnoremap <C-Tab> :b#<CR>
 
 " Move around text in InsertMode & CommandMode
 noremap! <C-h> <LEFT>
