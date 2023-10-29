@@ -26,8 +26,8 @@ nnoremap ; :
 inoremap jk <ESC>
 nmap J <Nop>
 nmap K <Nop>
-nmap <C-w> <Nop>
-nmap <C-s> <Nop>
+"nmap <C-s> <Nop>
+"nmap <C-a> <Nop>
 nnoremap <silent> <C-q><C-s> :write<CR>
 nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <C-q><C-x> :q!<CR>
@@ -57,8 +57,8 @@ nnoremap <C-k> <C-w><UP>
 " Indent
 vnoremap L >gv
 vnoremap H <gv
-nnoremap L v><ESC>
-nnoremap H v<<ESC>
+nnoremap L v>
+nnoremap H v<
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 nmap J mz:m+<cr>`z
@@ -76,7 +76,7 @@ vmap K :m'<-2<cr>`>my`<mzgv`yo`z
 
 " yank & paste
 noremap! <C-r><C-r> <C-r>"
-nnoremap ,<C-a> ggVG
+nnoremap <C-w><C-a> ggVG
 "vnoremap p "_dP
 nnoremap x "_x
 
