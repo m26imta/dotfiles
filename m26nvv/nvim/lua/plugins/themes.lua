@@ -1,7 +1,7 @@
 local theme = "nightfox/carbonfox"
 -- "nightfox/carbonfox"  OR  "nightfox"
 
-local preinstall = true    -- true: install all themes / false: install only 1 theme
+local preinstall = false    -- true: install all themes / false: install only 1 theme
 local islazy = true  -- themes is lazy, so use :Lazy load foo.nvim to invoke and then use :color ... to set colorscheme
 
 local default_theme_opts = {
