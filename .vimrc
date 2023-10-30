@@ -12,16 +12,15 @@ endif
 
 color industry
 set timeoutlen=400
+set mouse=a clipboard=unnamedplus
 set number relativenumber nocursorline
 set ts=4 sw=4 sts=4 autoindent smartindent expandtab smarttab
 set ignorecase smartcase incsearch hlsearch showmatch
-set mouse=a clipboard=unnamedplus
-set enc=utf-8 fenc=utf-8
-set nobackup nowritebackup noswapfile
+set enc=utf-8 fenc=utf-8 nobackup nowritebackup noswapfile
 set iskeyword+=- backspace=indent,eol,start
 set wrap linebreak showbreak=↪ whichwrap+=<,>,[,],h,l
 set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
-set shortmess+=c
+set shortmess+=c scrolloff=8 sidescrolloff=8
 
 let mapleader = " "
 let localmapleader = " "
