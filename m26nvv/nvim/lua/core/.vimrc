@@ -25,6 +25,10 @@ set wrap linebreak showbreak=↪ whichwrap+=<,>,[,],h,l
 set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
 set scrolloff=8 sidescrolloff=8 shortmess+=c
 
+"" ToogleWrap & ToogleListchars
+"nnoremap <S-F7> :set wrap!<CR>
+"nnoremap <S-F8> :set list!<CR>
+
 let mapleader = " "
 let localmapleader = " "
 nnoremap ; :
@@ -50,7 +54,7 @@ nnoremap <ESC> :nohl<CR>
 " Buffer
 nnoremap > :bn<CR>
 nnoremap < :bp<CR>
-nnoremap <C-Tab> :b#<CR>
+nnoremap <S-Tab> :b#<CR>
 
 " Better move through wrap line
 nnoremap j gj
