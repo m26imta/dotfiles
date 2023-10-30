@@ -31,7 +31,7 @@ end
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
-  enabled = true,
+  enabled = false,
   config = config,
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
