@@ -1,6 +1,6 @@
 ## .gitignore for my home folder /home/myuser/
 ## ignore all
-/**
+/*
 
 ##
 #!/.gitignore
@@ -8,12 +8,12 @@
 !/.tmux.conf
 !/.mybashrc
 !/.inputrc
+!/.config
 
 !/bin
 !/bin/*
 
 ## neovim
-!/.config
 !/.config/nvim
 !/.config/nvim/*
 /.config/nvim/lazy-lock.json
@@ -32,6 +32,7 @@
 
 ## m26nvv
 !/m26nvv
+!/m26nvv/*
 !/m26nvv/nvim
 !/m26nvv/nvim/*
 /m26nvv/nvim/lazy-lock.json
@@ -48,5 +49,16 @@
 !/m26nvv/nvim/lua/plugins/lsp/langs
 !/m26nvv/nvim/lua/plugins/lsp/langs/*
 
+## i3-config
+!/.config/i3
+!/.config/i3/*
+!/.config/i3/cpu
+!/.config/i3/cpu/*
+!/.config/i3/sound
+!/.config/i3/sound/*
+!/.config/i3/battery
+!/.config/i3/battery/*
+!/.config/i3/weather
+!/.config/i3/weather/*
 
 
