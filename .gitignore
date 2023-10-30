@@ -1,15 +1,29 @@
-## ignore all files and folders
-*
+## .gitignore for my home folder /home/myuser/
+## ignore all
+/**
+/.cache
+/.local
 
 ##
 !/.gitignore
 !/.vimrc
 !/.tmux.conf
-!.config/i3/config
-!/.config/i3/tt.txt
-!/.config/i3/aa/ss.txt
 
-!.config/kitty/*
+!/.config
+!/.config/nvim
+!/.config/nvim/*
+!/.config/nvim/lua
+!/.config/nvim/lua/*
+!/.config/nvim/lua/core
+!/.config/nvim/lua/core/*
+!/.config/nvim/lua/utils
+!/.config/nvim/lua/utils/*
+!/.config/nvim/lua/plugins
+!/.config/nvim/lua/plugins/*
+!/.config/nvim/lua/plugins/lsp
+!/.config/nvim/lua/plugins/lsp/*
+!/.config/nvim/lua/plugins/lsp/langs
+!/.config/nvim/lua/plugins/lsp/langs/*
+/.config/*/lazy-lock.json
 
 
-/*
