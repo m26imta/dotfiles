@@ -25,9 +25,9 @@ set wrap linebreak showbreak=↪ whichwrap+=<,>,[,],h,l
 set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
 set scrolloff=8 sidescrolloff=8 shortmess+=c
 
-"" <C-S-F7> <C-S-F8> ToogleWrap & ToogleListchars
-nnoremap <C-S-F7> :set wrap!<CR>
-nnoremap <C-S-F8> :set list!<CR>
+"" <S-F7> <S-F8> ToogleWrap & ToogleListchars
+nnoremap <S-F7> :set wrap!<CR>
+nnoremap <S-F8> :set list!<CR>
 
 let mapleader = " "
 let localmapleader = " "
