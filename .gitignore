@@ -28,6 +28,24 @@
 !/.config/nvim/lua/plugins/lsp/*
 !/.config/nvim/lua/plugins/lsp/langs
 !/.config/nvim/lua/plugins/lsp/langs/*
-/.config/*/lazy-lock.json
+*/lazy-lock.json
+
+## m26nvv
+!/m26nvv
+!/m26nvv/nvim
+!/m26nvv/nvim/*
+!/m26nvv/nvim/lua
+!/m26nvv/nvim/lua/*
+!/m26nvv/nvim/lua/core
+!/m26nvv/nvim/lua/core/*
+!/m26nvv/nvim/lua/utils
+!/m26nvv/nvim/lua/utils/*
+!/m26nvv/nvim/lua/plugins
+!/m26nvv/nvim/lua/plugins/*
+!/m26nvv/nvim/lua/plugins/lsp
+!/m26nvv/nvim/lua/plugins/lsp/*
+!/m26nvv/nvim/lua/plugins/lsp/langs
+!/m26nvv/nvim/lua/plugins/lsp/langs/*
+
 
 
