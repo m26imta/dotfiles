@@ -1,3 +1,6 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" .vimrc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if !has('nvim')
     " Change Your Vim Cursor from a Block to Line in Insert Mode
     let &t_SI = "\e[6 q"
@@ -20,7 +23,7 @@ set enc=utf-8 fenc=utf-8 nobackup nowritebackup noswapfile
 set iskeyword+=- backspace=indent,eol,start
 set wrap linebreak showbreak=↪ whichwrap+=<,>,[,],h,l
 set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
-set shortmess+=c scrolloff=8 sidescrolloff=8
+set scrolloff=8 sidescrolloff=8 shortmess+=c
 
 "" <C-S-F7> <C-S-F8> ToogleWrap & ToogleListchars
 nnoremap <C-S-F7> :set wrap!<CR>
@@ -73,7 +76,7 @@ vnoremap H <gv
 nnoremap L v>
 nnoremap H v<
 
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
+" Move lines up & down
 nnoremap J mz:m+<cr>`z
 nnoremap K mz:m-2<cr>`z
 vnoremap J :m'>+<cr>`<my`>mzgv`yo`z
