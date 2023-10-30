@@ -7,6 +7,7 @@
 !/.vimrc
 !/.tmux.conf
 !/.mybashrc
+!/.inputrc
 
 !/bin
 !/bin/*

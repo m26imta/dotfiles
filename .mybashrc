@@ -1,0 +1,18 @@
+# export
+export EDITOR=vim
+export VISUAL=vim
+export PATH=$HOME/bin:$PATH
+
+# source
+#source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
+
+alias cls=clear
+alias gitlog='git log --graph --all --oneline'
+alias v=nvim
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+
