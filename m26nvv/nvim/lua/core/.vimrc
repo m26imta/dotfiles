@@ -35,6 +35,8 @@ nnoremap ; :
 inoremap jk <ESC>
 nmap J <Nop>
 nmap K <Nop>
+nmap H <Nop>
+nmap L <Nop>
 "nmap <C-s> <Nop>
 "nmap <C-e> <Nop>
 nnoremap - <C-x>
@@ -43,7 +45,7 @@ nnoremap <silent> <C-q><C-s> :write<CR>
 nnoremap <silent> <C-q><C-x> :q!<CR>
 nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>x :bd!<CR>
-nnoremap <silent> <leader>q :q!<CR>
+"nnoremap <silent> <leader>q :q!<CR>
 nnoremap <silent> <leader>fe :e .<CR>
 nnoremap <leader>oo :e $MYVIMRC<CR>
 nnoremap <leader>ll :so $MYVIMRC<CR>
@@ -71,14 +73,14 @@ nnoremap <C-j> <C-w><DOWN>
 nnoremap <C-k> <C-w><UP>
 
 " Indent
+"nnoremap L v>
+"nnoremap H v<
 vnoremap L >gv
 vnoremap H <gv
-nnoremap L v>
-nnoremap H v<
 
 " Move lines up & down
-nnoremap J mz:m+<cr>`z
-nnoremap K mz:m-2<cr>`z
+"nnoremap J mz:m+<cr>`z
+"nnoremap K mz:m-2<cr>`z
 vnoremap J :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap K :m'<-2<cr>`>my`<mzgv`yo`z
 
