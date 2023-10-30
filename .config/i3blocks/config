@@ -25,7 +25,7 @@ interval=once
 [SOUND]
 full_text= 🔇:  0% 
 command=~/.config/i3blocks/sound/sound_info.sh
-interval=0
+interval=1
 signal=1
 
 [TIME_DATE]
