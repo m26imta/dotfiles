@@ -1,14 +1,17 @@
 ## .gitignore for my home folder /home/myuser/
 ## ignore all
 /**
-/.cache
-/.local
 
 ##
 !/.gitignore
 !/.vimrc
 !/.tmux.conf
+!/.mybashrc
 
+!/bin
+!/bin/*
+
+## neovim
 !/.config
 !/.config/nvim
 !/.config/nvim/*
