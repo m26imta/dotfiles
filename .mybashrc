@@ -4,8 +4,8 @@ export VISUAL=vim
 export PATH=$HOME/bin:$PATH
 
 # source
-#source "$HOME/.cargo/env"
-. "$HOME/.cargo/env"
+# cargo
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 alias cls=clear
 alias gitlog='git log --graph --all --oneline'

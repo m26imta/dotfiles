@@ -9,6 +9,7 @@
 !/.mybashrc
 !/.inputrc
 !/.config
+!/@run_me_setup_newhome
 
 !/bin
 !/bin/*

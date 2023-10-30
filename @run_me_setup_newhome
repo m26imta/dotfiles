@@ -1,0 +1,11 @@
+if [ ! $HOME == $(pwd) ]; then
+    echo "copy to new home"
+    cp -rfTv $(pwd) $HOME
+fi
+cd $HOME
+
+echo -e '. "$HOME/.mybashrc"\n' >> .bashrc
+[ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> .zshrc
+## cp -rT bin/ /usr/bin/
+
+
