@@ -32,6 +32,7 @@ nnoremap <silent> <C-q><C-s> :write<CR>
 nnoremap <silent> <C-q><C-x> :q!<CR>
 nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>x :bd!<CR>
+nnoremap <silent> <leader>q :q!<CR>
 nnoremap <silent> <leader>fe :e .<CR>
 nnoremap <leader>oo :e $MYVIMRC<CR>
 nnoremap <leader>ll :so $MYVIMRC<CR>
