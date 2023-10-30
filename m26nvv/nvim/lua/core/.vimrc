@@ -25,10 +25,6 @@ set wrap linebreak showbreak=↪ whichwrap+=<,>,[,],h,l
 set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
 set scrolloff=8 sidescrolloff=8 shortmess+=c
 
-"" <S-F7> <S-F8> ToogleWrap & ToogleListchars
-nnoremap <S-F7> :set wrap!<CR>
-nnoremap <S-F8> :set list!<CR>
-
 let mapleader = " "
 let localmapleader = " "
 nnoremap ; :
@@ -90,10 +86,6 @@ noremap! <C-r><C-r> <C-r>"
 nnoremap <C-e><C-a> ggVG
 "vnoremap p "_dP
 nnoremap x "_x
-vnoremap LL :<C-U>normal mtg_v`t<CR>
-omap LL :normal vLL<CR>
-vnoremap HH :<C-U>normal mt^v`t<CR>
-omap HH :normal vHH<CR>
 vnoremap al :<C-U>normal 0v$h<CR>
 omap al :normal val<CR>
 vnoremap il :<C-U>normal ^vg_<CR>
