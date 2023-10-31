@@ -201,6 +201,13 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 ### rofi-power-menu
-bindsym $mod+Mod1+l exec "rofi -show p -modi p:rofi-power-menu"
+bindsym $mod+Mod1+l exec "rofi -show p -modi p:~/bin/rofi-power-menu"
+
+## start some app at login
+# exec --no-startup-id blabla
+#exec echo $(pwd) >> ~/1count.txt
+#exec echo $0 >> ~/1count.txt
+#exec konsole
+exec --no-startup-id volumeicon
 
 
