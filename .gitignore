@@ -15,8 +15,8 @@
 
 !/.config/volumeicon
 
-!/.config/nvim
-/.config/nvim/lazy-lock.jon
+#!/.config/nvim
+#/.config/nvim/lazy-lock.jon
 
 !/.config/i3
 !/.config/i3blocks
