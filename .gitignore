@@ -1,65 +1,25 @@
-## .gitignore for my home folder /home/myuser/
-## ignore all
 /*
 
-##
-#!/.gitignore
 !/.vimrc
-!/.tmux.conf
+!/.tmuxconf
 !/.mybashrc
 !/.inputrc
-!/.config
 !/@run_me_setup_newhome
 
 !/bin
-!/bin/*
-
-## neovim
-!/.config/nvim
-!/.config/nvim/*
-/.config/nvim/lazy-lock.json
-!/.config/nvim/lua
-!/.config/nvim/lua/*
-!/.config/nvim/lua/core
-!/.config/nvim/lua/core/*
-!/.config/nvim/lua/utils
-!/.config/nvim/lua/utils/*
-!/.config/nvim/lua/plugins
-!/.config/nvim/lua/plugins/*
-!/.config/nvim/lua/plugins/lsp
-!/.config/nvim/lua/plugins/lsp/*
-!/.config/nvim/lua/plugins/lsp/langs
-!/.config/nvim/lua/plugins/lsp/langs/*
-
-## m26nvv
 !/m26nvv
-!/m26nvv/*
-!/m26nvv/nvim
-!/m26nvv/nvim/*
-/m26nvv/nvim/lazy-lock.json
-!/m26nvv/nvim/lua
-!/m26nvv/nvim/lua/*
-!/m26nvv/nvim/lua/core
-!/m26nvv/nvim/lua/core/*
-!/m26nvv/nvim/lua/utils
-!/m26nvv/nvim/lua/utils/*
-!/m26nvv/nvim/lua/plugins
-!/m26nvv/nvim/lua/plugins/*
-!/m26nvv/nvim/lua/plugins/lsp
-!/m26nvv/nvim/lua/plugins/lsp/*
-!/m26nvv/nvim/lua/plugins/lsp/langs
-!/m26nvv/nvim/lua/plugins/lsp/langs/*
 
-## i3-config
+!/.config
+/.config/*
+
+!/.config/volumeicon
+
+!/.config/nvim
+/.config/nvim/lazy-lock.jon
+
 !/.config/i3
-!/.config/i3/*
-!/.config/i3/cpu
-!/.config/i3/cpu/*
-!/.config/i3/sound
-!/.config/i3/sound/*
-!/.config/i3/battery
-!/.config/i3/battery/*
-!/.config/i3/weather
-!/.config/i3/weather/*
+!/.config/i3blocks
+
+
 
 
