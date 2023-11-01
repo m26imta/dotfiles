@@ -5,8 +5,8 @@ export PATH=$HOME/bin:$PATH
 
 # source
 # cargo
-[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-[ -f "~/.myalias" ] && . "~/.myalias"
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+[[ -f "$HOME/.myalias" ]] && . "$HOME/.myalias"
 
 alias cls=clear
 alias gitlog='git log --graph --all --oneline'
