@@ -9,6 +9,7 @@
 !/bin
 !/m26nvv
 
+## ~/.config
 !/.config
 /.config/*
 
@@ -19,7 +20,20 @@
 
 !/.config/i3
 !/.config/i3blocks
+!/.config/alacritty
+!/.config/konsolerc
 
+
+## ~/.local
+!/.local
+/.local/*
+!/.local/share
+/.local/share/*
+!/.local/state
+/.local/state/*
+
+!/.local/share/fonts
+!/.local/share/konsole
 
 
 
