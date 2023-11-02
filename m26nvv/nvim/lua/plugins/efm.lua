@@ -1,6 +1,6 @@
 local config = function()
   local opts = {
-    init_options = {
+    initializationOptions = {
       documentFormatting = true,
       documentRangeFormatting = true,
       hover = true,
@@ -8,9 +8,10 @@ local config = function()
       codeAction = true,
       completion = true,
     },
-    filetypes = { },
+    filetypes = {},
     settings = {
-      languages = { },
+      rootMarkers = { ".git/" },
+      languages = {},
     },
   }
 
@@ -50,6 +51,7 @@ local config = function()
       if vim.tbl_isempty(efm) then
         return
       end
+      vim.lsp.buf.format()
     end,
   })
 end
@@ -63,4 +65,3 @@ return {
   enabled = false,
   config = config,
 }
-

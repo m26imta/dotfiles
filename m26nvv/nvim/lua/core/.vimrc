@@ -73,14 +73,14 @@ nnoremap <C-j> <C-w><DOWN>
 nnoremap <C-k> <C-w><UP>
 
 " Indent
-"nnoremap L v>
-"nnoremap H v<
+nnoremap L v>
+nnoremap H v<
 vnoremap L >gv
 vnoremap H <gv
 
 " Move lines up & down
-"nnoremap J mz:m+<cr>`z
-"nnoremap K mz:m-2<cr>`z
+nnoremap J mz:m+<cr>`z
+nnoremap K mz:m-2<cr>`z
 vnoremap J :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap K :m'<-2<cr>`>my`<mzgv`yo`z
 
