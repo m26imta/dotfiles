@@ -1,7 +1,7 @@
 local M = {}
 M.ensure_installed = {}
-M.ensure_installed = vim.tbl_deep_extend("force", M.ensure_installed, require("plugins.efm").ensure_installed)
-M.ensure_installed = vim.tbl_deep_extend("force", M.ensure_installed, require("plugins.lspconfig").ensure_installed)
+M.ensure_installed = vim.tbl_deep_extend("force", M.ensure_installed, require("plugins.efm").ensure_installed or {})
+M.ensure_installed = vim.tbl_deep_extend("force", M.ensure_installed, require("plugins.lspconfig").ensure_installed or {})
 M.do_ensure_installed = function()
 	require("mason-tool-installer").check_install(true)
 end

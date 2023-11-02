@@ -1,22 +1,24 @@
 local M = {}
-local enable_flag = true
-local formatonsave = true
-M.ensure_installed = {
-	"efm",
-	-- "lua_ls",
-	-- "jsonls",
-	-- "omnisharp",
-	-- "mypy",
-	-- "ruff",
-	-- "black",
-	-- "debugpy",
-	-- "pyright",
-	"stylua",
-	"black",
-	"flake8",
-  "prettier",
-  "eslint",
-}
+local enable_flag = false
+local formatonsave = false
+if enable_flag then
+  M.ensure_installed = {
+    "efm",
+    -- "lua_ls",
+    -- "jsonls",
+    -- "omnisharp",
+    -- "mypy",
+    -- "ruff",
+    -- "black",
+    -- "debugpy",
+    -- "pyright",
+    "stylua",
+    "black",
+    "flake8",
+    "prettier",
+    "eslint",
+  }
+end
 
 local config = function()
 	local opts = {
@@ -89,7 +91,7 @@ local config = function()
 	require("lspconfig").efm.setup(vim.tbl_extend("force", opts, {
 		-- Pass your custom lsp config below like on_attach and capabilities
 		--
-		-- on_attach = require("core.keymaps").lsp_set_keymaps,
+		on_attach = require("core.keymaps").lsp_set_keymaps,
 		-- capabilities = capabilities,
 	}))
 
