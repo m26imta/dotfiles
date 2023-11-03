@@ -1,8 +1,8 @@
 local theme = "nightfox/carbonfox"
 -- "gruvboxm/gruvbox-material"  OR  "gruvboxm"
 
-local preinstall = false    -- true: install all themes / false: install only 1 theme
-local islazy = true  -- themes is lazy, so use :Lazy load foo.nvim to invoke and then use :color ... to set colorscheme
+local preinstall = true    -- true: install all themes / false: install only 1 theme
+local islazy = false  -- themes is lazy, so use :Lazy load foo.nvim to invoke and then use :color ... to set colorscheme
 
 local default_theme_opts = {
   lazy = islazy,

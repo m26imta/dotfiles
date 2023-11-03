@@ -37,8 +37,11 @@ return {
     event = { "BufEnter", "BufReadPost", "BufNewFile" },
     config = config,
     dependencies = {
+      {"nvim-treesitter/nvim-treesitter-textobjects" },
+      {"nvim-treesitter/nvim-treesitter-refactor" },
       {"windwp/nvim-ts-autotag" },
       {"windwp/nvim-autopairs", opts = {} },
+      -- {"JoosepAlviste/nvim-ts-context-commentstring" },
       {
         "numToStr/Comment.nvim",
         event = "VeryLazy",
