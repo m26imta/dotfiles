@@ -1,8 +1,8 @@
-local neotree_config = function()
-  -- Disable netrw
-  vim.g.loaded_netrwPlugin = 1
-  vim.g.loaded_netrw = 1
+-- Disable netrw
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
 
+local neotree_config = function()
   require("neo-tree").setup({
     window = {
       width = 30,
@@ -221,6 +221,7 @@ return {
     cmd = "Neotree",
     keys = require("core.keymaps").plugins_keymaps.neotree,
     config = neotree_config,
+    enabled = false,
   },
   { "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle" },
