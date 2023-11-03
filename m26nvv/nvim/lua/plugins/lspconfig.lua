@@ -72,6 +72,15 @@ M = vim.tbl_deep_extend("force", M, {
 	event = { "BufReadPost", "BufNewFile", "BufEnter" },
 	config = config,
 	dependencies = {
+    {
+      "folke/neodev.nvim", opts = {},
+      dependencies = {
+        "folke/neoconf.nvim",
+        config = function()
+          require("neoconf").setup({})
+        end
+      }
+    },
 		{
 			"williamboman/mason.nvim",
 			cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUninstall", "MasonUninstallAll", "MasonLog" },

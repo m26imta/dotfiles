@@ -24,6 +24,7 @@ set iskeyword+=- backspace=indent,eol,start
 set wrap linebreak showbreak=↪ whichwrap+=<,>,[,],h,l
 set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
 set scrolloff=8 sidescrolloff=8 shortmess+=c
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.git/*
 
 "" ToogleWrap & ToogleListchars
 "nnoremap <S-F7> :set wrap!<CR>
@@ -46,7 +47,6 @@ nnoremap <silent> <C-q><C-x> :q!<CR>
 nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>x :bd!<CR>
 "nnoremap <silent> <leader>q :q!<CR>
-nnoremap <silent> <leader>fe :e .<CR>
 nnoremap <leader>oo :e $MYVIMRC<CR>
 nnoremap <leader>ll :so $MYVIMRC<CR>
 nnoremap <ESC> :nohl<CR>
@@ -55,6 +55,17 @@ nnoremap <ESC> :nohl<CR>
 nnoremap > :bn<CR>
 nnoremap < :bp<CR>
 nnoremap <S-Tab> :b#<CR>
+nnoremap <leader>bb :ls<CR>:b<Space>
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
+" Netrw
+" https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
+let g:netrw_keepdir = 0
+let g:netrw_winsize = 30
+hi! link netrwMarkFile Search
+nnoremap <leader>da :Lexplore %:p:h<CR>
+nnoremap <leader>dd :Lexplore<CR>
+nnoremap <leader>1 :Lexplore<CR>
 
 " Better move through wrap line
 nnoremap j gj
@@ -73,14 +84,14 @@ nnoremap <C-j> <C-w><DOWN>
 nnoremap <C-k> <C-w><UP>
 
 " Indent
-"nnoremap L v>
-"nnoremap H v<
+nnoremap L v>
+nnoremap H v<
 vnoremap L >gv
 vnoremap H <gv
 
 " Move lines up & down
-"nnoremap J mz:m+<cr>`z
-"nnoremap K mz:m-2<cr>`z
+nnoremap J mz:m+<cr>`z
+nnoremap K mz:m-2<cr>`z
 vnoremap J :m'>+<cr>`<my`>mzgv`yo`z
 vnoremap K :m'<-2<cr>`>my`<mzgv`yo`z
 

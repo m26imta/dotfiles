@@ -7,6 +7,7 @@ M.plugins_keymaps = {
     { "<leader>fe", "<cmd>Neotree toggle<cr>", desc = "NeoTree", mode = {"n"} },
   },
   nvimtree = {
+      { "<leader>1", "<cmd>NvimTreeToggle<cr>", silent = true },
       { "<leader>ee", "<cmd>NvimTreeToggle<cr>", silent = true },
       { "<leader>ef", "<cmd>NvimTreeFindFileToggle<cr>", silent = true },
   },
@@ -42,11 +43,11 @@ M.lsp_set_keymaps = function(_, bufnr)
   local opts = { buffer = bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-  -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+  -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)  -- remove for indent used
   vim.keymap.set('n', '<space>k', vim.lsp.buf.hover, opts)
   vim.keymap.set('n', '<c-space><c-k>', vim.lsp.buf.signature_help, opts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-  -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+  -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)  -- remove for navigation
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
   vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
