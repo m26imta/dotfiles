@@ -1,9 +1,9 @@
 local options = {
 	-- providers: provider used to get references in the buffer, ordered by priority
 	providers = {
-		"lsp",
-		"treesitter",
+		-- "lsp",
 		"regex",
+		"treesitter",
 	},
 	-- delay: delay in milliseconds
 	delay = 100,
@@ -15,6 +15,17 @@ local options = {
 	filetypes_denylist = {
 		"dirvish",
 		"fugitive",
+    "qf",
+    "NvimTree",
+    "aerial",
+    "spectre_panel",
+    "help",
+    "lazy",
+    "mason",
+    "notify",
+    "lspinfo",
+    "toggleterm",
+    "TelescopePrompt",
 	},
 	-- filetypes_allowlist: filetypes to illuminate, this is overriden by filetypes_denylist
 	filetypes_allowlist = {},
