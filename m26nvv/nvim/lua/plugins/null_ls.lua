@@ -1,30 +1,42 @@
+local enable_this = true
+
 local config = function()
   local null_ls = require("null-ls")
   local formatting = null_ls.builtins.formatting
+  local diagnostics = null_ls.builtins.diagnostics
+  --
+  local on_attach = function(client)
+    if client.resolved_capabilities.document_formatting then
+      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()")
+    end
+    vim.cmd [[
+    augroup document_highlight
+      autocmd! * <buffer>
+      autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+      autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+    augroup END
+    ]]
+  end
 
   null_ls.setup({
+    debug = false,
     sources = {
-      formatting.prettier, formatting.black, formatting.gofmt, formatting.shfmt,
-      formatting.clang_format, formatting.cmake_format, formatting.dart_format,
-      formatting.lua_format.with({
-        extra_args = {
-          '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
-          '--break-after-table-lb', '--indent-width=2'
-        }
-      }), formatting.isort, formatting.codespell.with({ filetypes = { 'markdown' } })
+      -- -- html
+      -- formatting.prettier,
+      -- python
+      formatting.black,
+      formatting.isort,
+      -- diagnostics.flake8,
+      -- --
+      -- formatting.codespell.with({ filetypes = { 'markdown' } }),
+      -- -- lua: `formatter`
+      -- formatting.lua_format.with({
+      --   extra_args = { '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100', '--break-after-table-lb', '--indent-width=2' }
+      -- }),
+      -- lua: stylua
+      -- formatting.stylua,
     },
-    on_attach = function(client)
-      if client.resolved_capabilities.document_formatting then
-        vim.cmd("    autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
-      end
-      vim.cmd [[
-      augroup document_highlight
-            autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-      ]]
-    end
+    -- on_attach = on_attach
   })
 end
 
@@ -35,5 +47,6 @@ return {
     { "nvim-lua/plenary.nvim" },
   },
   config = config,
-  enabled = false,
+  event = "VeryLazy",
+  enabled = enable_this,
 }

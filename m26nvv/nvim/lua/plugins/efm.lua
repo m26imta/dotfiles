@@ -1,10 +1,12 @@
 local M = {}
-local enable_flag = false
+local enable_this = false
 local formatonsave = false
-if enable_flag then
+
+if enable_this then
   M.ensure_installed = {
     "efm",
     -- "lua_ls",
+    "stylua",
     -- "jsonls",
     -- "omnisharp",
     -- "mypy",
@@ -12,9 +14,9 @@ if enable_flag then
     -- "black",
     -- "debugpy",
     -- "pyright",
-    "stylua",
     "black",
     "flake8",
+    "isort",
     "prettier",
     "eslint",
   }
@@ -124,7 +126,7 @@ M = vim.tbl_deep_extend("force", M, {
 	"mattn/efm-langserver",
 	event = "VeryLazy",
 	dependencies = { { "creativenull/efmls-configs-nvim" } },
-	enabled = enable_flag,
+	enabled = enable_this,
 	config = config,
 })
 
