@@ -55,6 +55,8 @@ nnoremap <ESC> :nohl<CR>
 nnoremap > :bn<CR>
 nnoremap < :bp<CR>
 nnoremap <S-Tab> :b#<CR>
+nnoremap <leader>bb :ls<CR>:b<Space>
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 " Better move through wrap line
 nnoremap j gj
