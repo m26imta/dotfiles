@@ -1,13 +1,28 @@
 #!/bin/bash
 
-if [ ! $HOME == $(pwd) ]; then
-    echo "copy to new home"
-    cp -rfTv $(pwd) $HOME
-fi
-cd $HOME
+echo "to the new home"
+SCRIPT_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-echo -e '. "$HOME/.mybashrc"\n' >> .bashrc
-[ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> .zshrc
-## cp -rT bin/ /usr/bin/
+## create symlink
+sudo ln -sf "$SCRIPT_DIR/.inputrc" "$HOME/.inputrc"
+sudo ln -sf "$SCRIPT_DIR/.vimrc" "$HOME/.vimrc"
+sudo ln -sf "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf"
+sudo ln -sf "$SCRIPT_DIR/.mybashrc" "$HOME/.mybashrc"
+echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.bashrc"
+[ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
 
+mkdir -p "$HOME/.config" 2>&1 >/dev/null
+## i3 & i3block
+sudo ln -sf "$SCRIPT_DIR/.config/i3" "$HOME/.config/i3"
+sudo ln -sf "$SCRIPT_DIR/.config/i3blocks" "$HOME/.config/i3blocks"
 
+## alacrity
+sudo ln -sf "$SCRIPT_DIR/.config/alacritty" "$HOME/.config/alacritty"
+
+## volumeicon
+sudo ln -sf "$SCRIPT_DIR/.config/volumeicon" "$HOME/.config/volumeicon"
+
+## konsole
+sudo ln -sf "$SCRIPT_DIR/.config/konsolerc" "$HOME/.config/konsolerc"
+
+echo "***END***"
