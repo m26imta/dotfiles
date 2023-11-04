@@ -4,27 +4,27 @@ echo "to the new home"
 SCRIPT_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 ## create symlink
-sudo ln -sf "$SCRIPT_DIR/.inputrc" "$HOME/.inputrc"
-sudo ln -sf "$SCRIPT_DIR/.vimrc" "$HOME/.vimrc"
-sudo ln -sf "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf"
-sudo ln -sf "$SCRIPT_DIR/.mybashrc" "$HOME/.mybashrc"
+ln -sf "$SCRIPT_DIR/.inputrc" "$HOME/.inputrc"
+ln -sf "$SCRIPT_DIR/.vimrc" "$HOME/.vimrc"
+ln -sf "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf"
+ln -sf "$SCRIPT_DIR/.mybashrc" "$HOME/.mybashrc"
 echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.bashrc"
 [ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
 
 mkdir -p "$HOME/.config" 2>&1 >/dev/null
-sudo cp -rfT "$SCRIPT_DIR/.local" "$HOME/.local"
+cp -rfT "$SCRIPT_DIR/.local" "$HOME/.local"
 
 ## i3 & i3block
-sudo ln -sf "$SCRIPT_DIR/.config/i3" "$HOME/.config/i3"
-sudo ln -sf "$SCRIPT_DIR/.config/i3blocks" "$HOME/.config/i3blocks"
+ln -sf "$SCRIPT_DIR/.config/i3" "$HOME/.config/i3"
+ln -sf "$SCRIPT_DIR/.config/i3blocks" "$HOME/.config/i3blocks"
 
 ## alacrity
-sudo ln -sf "$SCRIPT_DIR/.config/alacritty" "$HOME/.config/alacritty"
+ln -sf "$SCRIPT_DIR/.config/alacritty" "$HOME/.config/alacritty"
 
 ## volumeicon
-sudo ln -sf "$SCRIPT_DIR/.config/volumeicon" "$HOME/.config/volumeicon"
+ln -sf "$SCRIPT_DIR/.config/volumeicon" "$HOME/.config/volumeicon"
 
 ## konsole
-sudo ln -sf "$SCRIPT_DIR/.config/konsolerc" "$HOME/.config/konsolerc"
+ln -sf "$SCRIPT_DIR/.config/konsolerc" "$HOME/.config/konsolerc"
 
 echo "***END***"
