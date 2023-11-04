@@ -12,6 +12,8 @@ echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.bashrc"
 [ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
 
 mkdir -p "$HOME/.config" 2>&1 >/dev/null
+sudo cp -rfT "$SCRIPT_DIR/.local" "$HOME/.local"
+
 ## i3 & i3block
 sudo ln -sf "$SCRIPT_DIR/.config/i3" "$HOME/.config/i3"
 sudo ln -sf "$SCRIPT_DIR/.config/i3blocks" "$HOME/.config/i3blocks"
