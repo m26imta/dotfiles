@@ -7,7 +7,12 @@
 !/@run_me_setup_newhome
 
 !/bin
+!/scripts
+
 !/m26nvv
+/m26nvv/*
+!m26nvv/nvv
+!m26nvv/nvim
 
 ## ~/.config
 !/.config
