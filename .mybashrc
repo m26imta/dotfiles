@@ -4,9 +4,9 @@ export VISUAL=vim
 export PATH=$HOME/bin:$PATH
 
 # source
-# cargo
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 [[ -f "$HOME/.myalias" ]] && . "$HOME/.myalias"
+export PATH="/usr/local/go/bin:$PATH"
 
 alias cls=clear
 alias gitlog='git log --graph --all --oneline'
@@ -15,6 +15,10 @@ alias v=nvim
 alias l='ls -CF'
 alias ll='ls -lahF'
 alias la='ls -A'
-alias e='explorer.exe .'
 
+# WSL
+if [[ -f "/etc/wsl.conf" ]]; then
+    alias e="explorer.exe"
+    export PATH="/mnt/c/Windows:/mnt/c/Windows/system32:$PATH"
+fi
 
