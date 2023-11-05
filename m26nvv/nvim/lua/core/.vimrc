@@ -68,8 +68,8 @@ nnoremap <leader>dd :Lexplore<CR>
 nnoremap <leader>1 :Lexplore<CR>
 
 " Better move through wrap line
-nnoremap j gj
-nnoremap k gk
+noremap j gj
+noremap k gk
 
 " Move around text in InsertMode & CommandMode
 noremap! <C-h> <LEFT>
