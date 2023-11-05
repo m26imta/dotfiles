@@ -98,6 +98,8 @@ vnoremap K :m'<-2<cr>`>my`<mzgv`yo`z
 
 " yank & paste
 noremap! <C-r><C-r> <C-r>"
+noremap! <C-r><C-p> <C-r>+
+inoremap <C-e><C-p> <C-\><C-O>"+P
 nnoremap <C-e><C-a> ggVG
 "vnoremap p "_dP
 nnoremap x "_x
