@@ -19,6 +19,6 @@ alias la='ls -A'
 # WSL
 if [[ -f "/etc/wsl.conf" ]]; then
     alias e="explorer.exe"
-    export PATH="/mnt/c/Windows:/mnt/c/Windows/system32:$PATH"
+    export PATH="/mnt/c/Windows:/mnt/c/Windows/system32:C:\Users\admin\scoop\shims:$PATH"
 fi
 
