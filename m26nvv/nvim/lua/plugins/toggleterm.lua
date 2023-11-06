@@ -1,7 +1,8 @@
 local config = function()
   local opts = {
     size = 15,
-    open_mapping = [[<C-\>]],
+    -- open_mapping = [[<C-\>]],
+    open_mapping = [[<A-i>]],
     start_in_insert = true,
     direction = "horizontal",
   }

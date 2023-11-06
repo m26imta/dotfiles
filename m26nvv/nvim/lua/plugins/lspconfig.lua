@@ -120,8 +120,8 @@ M = vim.tbl_deep_extend("force", M, {
           " nmap <leader>tldo <Plug>(toggle-lsp-diag-off)
           " nmap <leader>tldf <Plug>(toggle-lsp-diag-on)
 
-          "" Toggle: <S-F5>
-          nmap <F17> <Plug>(toggle-lsp-diag)
+          "" Toggle: <F9>
+          map <F9> <Plug>(toggle-lsp-diag)
         ]])
 			end,
 		},
