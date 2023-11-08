@@ -16,15 +16,16 @@ endif
 color industry
 set timeoutlen=400
 set clipboard=unnamed,unnamedplus
-set mouse=a number relativenumber nocursorline
-set ts=4 sw=4 sts=4 autoindent smartindent expandtab smarttab
-set ignorecase smartcase incsearch hlsearch showmatch
-set enc=utf-8 fenc=utf-8 nobackup nowritebackup noswapfile noundofile
+set mouse=a number norelativenumber cursorline
+set ts=2 sw=2 sts=2 autoindent smartindent expandtab smarttab
+set ignorecase smartcase incsearch hlsearch noshowmatch
+set enc=utf-8 fenc=utf-8 nobackup writebackup swapfile undofile
 set iskeyword+=- backspace=indent,eol,start
 set wrap linebreak showbreak=↪ whichwrap+=<,>,[,],h,l
 set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
-set scrolloff=8 sidescrolloff=8 shortmess+=c
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.git/*
+set scrolloff=0 sidescrolloff=0
+" set shortmess+=c
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.git/*
 
 "" ToogleWrap & ToogleListchars
 nnoremap <F7> :set wrap!<CR>
@@ -33,7 +34,7 @@ nnoremap <F8> :set list!<CR>
 let mapleader = " "
 let localmapleader = " "
 nnoremap ; :
-inoremap jk <ESC>
+"inoremap jk <ESC>
 nmap J <Nop>
 nmap K <Nop>
 nmap H <Nop>
@@ -52,8 +53,8 @@ nnoremap <leader>ll :so $MYVIMRC<CR>
 nnoremap <ESC> :nohl<CR>
 
 " Buffer
-" nnoremap > :bn<CR>
-" nnoremap < :bp<CR>
+nnoremap > :bn<CR>
+nnoremap < :bp<CR>
 noremap <C-PageUp> :bp<CR>
 noremap <C-PageDown> :bn<CR>
 " nnoremap <S-Tab> :b#<CR>
@@ -100,8 +101,8 @@ vnoremap K :m'<-2<cr>`>my`<mzgv`yo`z
 
 
 " yank & paste
-noremap! <C-r><C-r> <C-r>+
-if has("neovide")| inoremap <C-r><C-r> <C-\><C-o>"+P| endif|    " fix paste in Neovide
+inoremap <C-r><C-r> <C-\><C-o>"+P
+cnoremap <C-r><C-r> <C-r>+
 " noremap  <C-e><C-p> "+P
 " inoremap <C-e><C-p> <C-\><C-o>"+P
 nnoremap <C-e><C-a> ggVG
@@ -116,8 +117,8 @@ omap il :normal vil<CR>
 vnoremap <M-1><M-y> "1y|                                        " yank into register `1`
 nnoremap <M-1><M-p> "1p|                                        " put after cursor
 noremap  <M-1><M-1> "1P|                                        " put before cursor
-noremap! <M-1><M-1> <C-r>1|                                     " insert-mode & command-mode
-if has("neovide")| inoremap <M-1><M-1> <C-\><C-o>"1P| endif|    " fix paste in Neovide
+inoremap <M-1><M-1> <C-\><C-o>"1P
+cnoremap <M-1><M-1> <C-r>1
 
 
 " Search & Replace
