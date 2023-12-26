@@ -27,4 +27,8 @@ ln -sf "$SCRIPT_DIR/.config/volumeicon" "$HOME/.config/volumeicon"
 ## konsole
 ln -sf "$SCRIPT_DIR/.config/konsolerc" "$HOME/.config/konsolerc"
 
+## Xresources
+ln -sf "$SCRIPT_DIR/.Xresources" "$HOME/.Xresources"
+ln -sf "$SCRIPT_DIR/.Xresources.d" "$HOME/.Xresources.d"
+
 echo "***END***"

@@ -1,0 +1,13 @@
+XTerm.termName: xterm-256color
+
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+
+XTerm.vt100.metaSendsEscape: true
+
+XTerm.vt100.reverseVideo: true
+UXTerm.vt100.reverseVideo: true
+
+XTerm.vt100.faceName:JetBrainsMonoNF:style=Regular:antialias=false
+XTerm.vt100.faceSize: 12
+
