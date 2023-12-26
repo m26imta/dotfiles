@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Name=volumeicon autostart
+Comment[en_US]=
+Comment=
+Exec=/usr/bin/volumeicon
+Icon=dialog-scripts
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-AutostartScript=true
+X-GNOME-Autostart-enabled=true
+

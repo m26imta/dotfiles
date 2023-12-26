@@ -31,4 +31,8 @@ ln -sf "$SCRIPT_DIR/.config/konsolerc" "$HOME/.config/konsolerc"
 ln -sf "$SCRIPT_DIR/.Xresources" "$HOME/.Xresources"
 ln -sf "$SCRIPT_DIR/.Xresources.d" "$HOME/.Xresources.d"
 
+## ~/.config/autostart/
+ln -sf "$SCRIPT_DIR/.config/autostart" "$HOME/.config/autostart"
+
+
 echo "***END***"
