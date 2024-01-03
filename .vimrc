@@ -19,12 +19,12 @@ set clipboard=unnamed,unnamedplus
 set mouse=a number norelativenumber cursorline
 set ts=2 sw=2 sts=2 autoindent smartindent expandtab smarttab
 set ignorecase smartcase incsearch hlsearch noshowmatch
-"" set enc=utf-8 fenc=utf-8
 set nobackup writebackup swapfile undofile
 set iskeyword+=- backspace=indent,eol,start
 set wrap linebreak showbreak=↪ whichwrap+=<,>,[,],h,l
-set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
 set scrolloff=0 sidescrolloff=0
+set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes:◀,eol:↴
+"" set enc=utf-8 fenc=utf-8
 " set shortmess+=c
 " set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.git/*
 
@@ -33,15 +33,17 @@ nnoremap <F7> :set wrap!<CR>
 nnoremap <F8> :set list!<CR>
 
 let mapleader = " "
-let localmapleader = " "
+let localmapleader = "\\"
 nnoremap ; :
 "inoremap jk <ESC>
-nmap J <Nop>
-nmap K <Nop>
-nmap H <Nop>
-nmap L <Nop>
+"nmap <S-h> <Nop>
+"nmap <S-l> <Nop>
+"nmap <S-j> <Nop>
+"nmap K <Nop>
 "nmap <C-s> <Nop>
 "nmap <C-e> <Nop>
+nmap <C-m> <Nop>
+imap <C-m> <Nop>
 nnoremap - <C-x>
 nnoremap = <C-a>
 nnoremap <silent> <C-q><C-s> :write<CR>
@@ -54,8 +56,8 @@ nnoremap <leader>ll :so $MYVIMRC<CR>
 nnoremap <ESC> :nohl<CR>
 
 " Buffer
-nnoremap > :bn<CR>
-nnoremap < :bp<CR>
+nnoremap <S-h> :bp<CR>
+nnoremap <S-l> :bn<CR>
 noremap <C-PageUp> :bp<CR>
 noremap <C-PageDown> :bn<CR>
 " nnoremap <S-Tab> :b#<CR>
@@ -91,24 +93,29 @@ nnoremap <C-j> <C-w><DOWN>
 nnoremap <C-k> <C-w><UP>
 
 " Indent
-nnoremap L v>
-nnoremap H v<
-vnoremap L >gv
-vnoremap H <gv
+nnoremap < v<
+nnoremap > v>
+vnoremap < <gv
+vnoremap > >gv
+vnoremap <S-h> <gv
+vnoremap <S-l> >gv
 
 " Move lines up & down
-nnoremap J mz:m+<cr>`z
-nnoremap K mz:m-2<cr>`z
-vnoremap J :m'>+<cr>`<my`>mzgv`yo`z
-vnoremap K :m'<-2<cr>`>my`<mzgv`yo`z
-
+" nnoremap J mz:m+<cr>`z
+" nnoremap K mz:m-2<cr>`z
+" vnoremap J :m'>+<cr>`<my`>mzgv`yo`z
+" vnoremap K :m'<-2<cr>`>my`<mzgv`yo`z
+"nnoremap <S-j> :m .+1<cr>==
+"nnoremap <S-k> :m .-2<cr>==
+vnoremap <S-j> :m '>+1<cr>gv=gv
+vnoremap <S-k> :m '<-2<cr>gv=gv
 
 " yank & paste
 inoremap <C-r><C-r> <C-\><C-o>"+P
 cnoremap <C-r><C-r> <C-r>+
 " noremap  <C-e><C-p> "+P
 " inoremap <C-e><C-p> <C-\><C-o>"+P
-nnoremap <C-e><C-a> ggVG
+nnoremap <C-m><C-a> ggVG
 "vnoremap p "_dP
 nnoremap x "_x
 vnoremap al :<C-U>normal 0v$h<CR>
@@ -135,4 +142,3 @@ if &statusline==""
   " set statusline=\ %{&paste==1?'[PASTE\ MODE]\ \ ':''}\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c\ 
   set statusline=\ %{&paste==1?'[PASTE\ MODE]\ \ ':''}\ %t\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ \|\ %l:%c\ 
 endif
-
