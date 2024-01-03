@@ -1,12 +1,19 @@
+import = [
+  ## alacritty/alacritty-theme
+  # git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+  # "C:\\Users\\admin\\AppData\\Roaming\\alacritty\\themes\\ayu_dark.toml"
+  # "~/.config/alacritty/themes/ayu_dark.toml"
+]
+
 [font]
-size = 12.0
+size = 11.0
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 1.0
+opacity = 0.95
 
 [window.padding]
 x = 10
