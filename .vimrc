@@ -8,6 +8,16 @@ if !has('nvim')
   " write as sudo
   "cmap w!! w !sudo tee > /dev/null %
   command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+  " Netrw
+  " https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
+  let g:netrw_keepdir = 0
+  let g:netrw_winsize = 30
+  hi! link netrwMarkFile Search
+  nnoremap <leader>da :Lexplore %:p:h<CR>
+  nnoremap <leader>dd :Lexplore<CR>
+  nnoremap <leader>1 :Lexplore<CR>
+
 endif
 if has('win32')
   set ff=dos
@@ -43,7 +53,7 @@ nnoremap ; :
 "nmap <C-s> <Nop>
 "nmap <C-e> <Nop>
 nmap <C-m> <Nop>
-imap <C-m> <Nop>
+"imap <C-m> <Nop>
 nnoremap - <C-x>
 nnoremap = <C-a>
 nnoremap <silent> <C-q><C-s> :write<CR>
@@ -62,17 +72,8 @@ noremap <C-PageUp> :bp<CR>
 noremap <C-PageDown> :bn<CR>
 " nnoremap <S-Tab> :b#<CR>
 nnoremap <M-`> :b#<CR>
-nnoremap <leader>bb :ls<CR>:b<Space>
-nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
-
-" Netrw
-" https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
-let g:netrw_keepdir = 0
-let g:netrw_winsize = 30
-hi! link netrwMarkFile Search
-nnoremap <leader>da :Lexplore %:p:h<CR>
-nnoremap <leader>dd :Lexplore<CR>
-nnoremap <leader>1 :Lexplore<CR>
+" nnoremap <leader>bb :ls<CR>:b<Space>
+" nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 " Move around text in InsertMode & CommandMode
 noremap! <C-h> <LEFT>
