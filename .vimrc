@@ -150,8 +150,10 @@ if !has("nvim")
   let &t_EI = "\e[2 q"
 
   "" write as sudo
-  "cmap w!! w !sudo tee > /dev/null %
-  command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+  if has("unix")
+    "cmap w!! w !sudo tee > /dev/null %
+    command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+  endif
 endif
 
 
