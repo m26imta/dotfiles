@@ -27,8 +27,8 @@ nnoremap <C-x> :q!<CR>
 
 "" Toggle wrap, listchars & relativenumber
 map <F5> :set relativenumber!<CR>
-map <F7> :set wrap!<CR>
-map <F8> :set list!<CR>
+map <F7> :set wrap!<CR>:set wrap?<CR>
+map <F8> :set list!<CR>:set list?<CR>
 
 " Use CTRL-S for saving, also in Insert mode (<C-O> doesn't work well when
 " using completions).
