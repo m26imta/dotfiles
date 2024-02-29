@@ -24,6 +24,9 @@ nnoremap ; :
 inoremap jk <ESC>
 nnoremap <silent> <ESC> :nohl<CR>
 nnoremap <C-x> :q!<CR>
+map <c-f> <Nop>
+map <c-b> <Nop>
+map <s-j> <Nop>
 
 "" Toggle wrap, listchars & relativenumber
 map <F5> :set relativenumber!<CR>
@@ -85,14 +88,15 @@ vnoremap <S-k> :m '<-2<cr>gv=gv
 
 nnoremap <A-j> :m .+1<cr>==
 nnoremap <A-k> :m .-2<cr>==
-nnoremap <A-,> :m .+1<cr>==
-nnoremap <A-.> :m .-2<cr>==
 inoremap <A-j> <ESC>:m .+1<cr>==gi
 inoremap <A-k> <ESC>:m .-2<cr>==gi
-nnoremap <A-,> <ESC>:m .+1<cr>==gi
-nnoremap <A-.> <ESC>:m .-2<cr>==gi 
 vnoremap <A-j> :m '>+1<cr>gv=gv
 vnoremap <A-k> :m '<-2<cr>gv=gv
+
+nnoremap <A-,> :m .+1<cr>==
+nnoremap <A-.> :m .-2<cr>==
+inoremap <A-,> <ESC>:m .+1<cr>==gi
+inoremap <A-.> <ESC>:m .-2<cr>==gi 
 vnoremap <A-,> :m '>+1<cr>gv=gv
 vnoremap <A-.> :m '<-2<cr>gv=gv
 
@@ -190,5 +194,4 @@ if exists("g:neovide")
   let g:neovide_cursor_trail_size = 0.8 "" default = 0.7
   " let g:neovide_cursor_antialiasing = v:false  "" Disabling may fix some cursor visual issues.
 endif
-
 
