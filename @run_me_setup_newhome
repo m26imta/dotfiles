@@ -4,6 +4,7 @@ echo "to the new home"
 SCRIPT_DIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 ## create symlink
+ln -sf "$SCRIPT_DIR/bin" "$HOME/bin"
 ln -sf "$SCRIPT_DIR/.inputrc" "$HOME/.inputrc"
 ln -sf "$SCRIPT_DIR/.vimrc" "$HOME/.vimrc"
 ln -sf "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf"
