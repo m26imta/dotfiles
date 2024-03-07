@@ -14,8 +14,9 @@ alias gitlog='git log --graph --all --oneline'
 alias v=nvim
 
 alias l='ls -CF'
-alias ll='ls -lahF'
 alias la='ls -A'
+alias ll='ls -lhF'
+alias lla='ls -lahF'
 
 # WSL
 if [[ -f "/etc/wsl.conf" ]]; then
