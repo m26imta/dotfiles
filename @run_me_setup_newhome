@@ -35,5 +35,7 @@ ln -sf "$SCRIPT_DIR/.Xresources.d" "$HOME/.Xresources.d"
 ## ~/.config/autostart/
 ln -sf "$SCRIPT_DIR/.config/autostart" "$HOME/.config/autostart"
 
+## ~/.config/nvim/
+ln -sf "$SCRIPT_DIR/.config/nvim" "$HOME/.config/nvim"
 
 echo "***END***"
