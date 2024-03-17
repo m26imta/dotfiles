@@ -9,6 +9,9 @@
 # $ rmvenv myvirtualenv # removes venv
 
 export VENV_HOME="$HOME/.virtualenvs"
+# change VENV_HOME to Envs to compatible with python virtualenvwrapper
+export VENV_HOME="$HOME/Envs"
+
 [[ -d $VENV_HOME ]] || mkdir $VENV_HOME
 
 lsvenv() {
