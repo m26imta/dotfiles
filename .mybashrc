@@ -5,7 +5,10 @@ export PATH=$HOME/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
 
 # source
-[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+# [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+[[ -f "$HOME/.cargo/env" ]] && (echo $0 | grep -q "bash" && ( grep -q ".cargo/env" $HOME/.bashrc && echo "found cargo/env in .bashrc then do-nothing to avoid source twice" 2>&1 > /dev/null || . "$HOME/.cargo/env") || echo "not bash" 2>&1 > /dev/null ) || echo "cargo is not installed" 2>&1 > /dev/null
+[[ -f "$HOME/.cargo/env" ]] && (echo $0 | grep -q "zsh"  && ( grep -q ".cargo/env" $HOME/.zshrc  && echo "found cargo/env in .zshrc  then do-nothing to avoid source twice" 2>&1 > /dev/null || . "$HOME/.cargo/env") || echo "not zsh " 2>&1 > /dev/null ) || echo "cargo is not installed" 2>&1 > /dev/null
+
 [[ -f "$HOME/.myalias" ]] && . "$HOME/.myalias"
 export PATH="/usr/local/go/bin:$PATH"
 
