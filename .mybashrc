@@ -9,6 +9,10 @@ export PATH="$HOME/.local/bin:$PATH"
 [[ -f "$HOME/.myalias" ]] && . "$HOME/.myalias"
 export PATH="/usr/local/go/bin:$PATH"
 
+# venv_wrapper
+# https://gist.github.com/benlubas/5b5e38ae27d9bb8b5c756d8371e238e6
+. "$HOME/bin/venv_wrapper"
+
 alias cls=clear
 alias gitlog='git log --graph --all --oneline'
 alias v=nvim
