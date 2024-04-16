@@ -14,7 +14,22 @@ export PATH="/usr/local/go/bin:$PATH"
 
 # venv_wrapper
 # https://gist.github.com/benlubas/5b5e38ae27d9bb8b5c756d8371e238e6
-. "$HOME/bin/venv_wrapper"
+[[ -f "$HOME/bin/venv_wrapper" ]] && . "$HOME/bin/venv_wrapper"
+
+# python virtualenvwrapper
+if (pip list | grep virtualenvwrapper 2>&1 > /dev/null); then
+  export WORKON_HOME=$HOME/Envs
+  [[ ! -d "$HOME/Envs" ]] && (mkdir -p $WORKON_HOME)
+  # check & source virtualenvwrapper.sh
+  # [[ -f "$HOME/.local/bin/virtualenvwrapper.sh" ]] && source "$HOME/.local/bin/virtualenvwrapper.sh" || ([[ -f "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh")
+  if [[ -f "$HOME/.local/bin/virtualenvwrapper.sh" ]]; then  # pip install --user virtualenvwrapper
+    source "$HOME/.local/bin/virtualenvwrapper.sh"
+  elif [[ -f "/usr/local/bin/virtualenvwrapper.sh" ]]; then
+    source "/usr/local/bin/virtualenvwrapper.sh"
+  elif [[ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]]; then
+    source "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+  fi
+fi
 
 alias cls=clear
 alias gitlog='git log --graph --all --oneline'
