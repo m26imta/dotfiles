@@ -28,6 +28,8 @@ if (pip list | grep virtualenvwrapper 2>&1 > /dev/null); then
     source "/usr/local/bin/virtualenvwrapper.sh"
   elif [[ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]]; then
     source "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+  elif [[ -f "/usr/sbin/virtualenvwrapper.sh" ]]; then
+    source "/usr/sbin/virtualenvwrapper.sh"
   fi
 fi
 
