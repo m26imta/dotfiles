@@ -9,6 +9,7 @@ ln -sf "$SCRIPT_DIR/.inputrc" "$HOME/.inputrc"
 ln -sf "$SCRIPT_DIR/.vimrc" "$HOME/.vimrc"
 ln -sf "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$SCRIPT_DIR/.mybashrc" "$HOME/.mybashrc"
+ln -sf "$SCRIPT_DIR/.gitconfig" "$HOME/.gitconfig"
 echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.bashrc"
 [ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
 
