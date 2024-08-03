@@ -22,7 +22,11 @@ set nolist listchars=tab:→\ ,nbsp:␣,trail:•,space:⋅,extends:▶,precedes
 "" Keymaps
 nnoremap ; :
 inoremap jk <ESC>
-nnoremap <silent> <ESC> :nohl<CR>
+"" fix error 2;2R in vim. <ESC> -> nohl only in neovim
+if has('nvim')
+  nnoremap <silent> <ESC> :nohl<CR>
+endif
+nnoremap <silent> <leader><ESC> :nohl<CR>
 nnoremap <C-x> :q!<CR>
 map <c-f> <Nop>
 map <c-b> <Nop>
