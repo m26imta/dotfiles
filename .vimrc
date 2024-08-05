@@ -27,7 +27,8 @@ if has('nvim')
   nnoremap <silent> <ESC> :nohl<CR>
 endif
 nnoremap <silent> <leader><ESC> :nohl<CR>
-nnoremap <C-x> :q!<CR>
+"" nnoremap <C-x> :q!<CR>
+nnoremap <C-q> :q!<CR>
 map <c-f> <Nop>
 map <c-b> <Nop>
 map <s-j> <Nop>
