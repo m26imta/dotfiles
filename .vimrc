@@ -248,6 +248,10 @@ Plug 'nvim-tree/nvim-web-devicons'
 "" Delete buffers and close files in Vim without closing your windows or messing up your layout.
 Plug 'https://github.com/moll/vim-bbye'
 
+"" ayu theme
+Plug 'Luxed/ayu-vim'    " or other package manager
+"...
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -262,5 +266,15 @@ nnoremap <C-f> :NERDTreeFind<CR>
 "lua << EOF
 "require"bufferline".setup{}
 "EOF
+
+"" ayu-theme
+set termguicolors       " enable true colors support
+set background=light    " for light version of theme
+set background=dark     " for either mirage or dark version.
+" NOTE: `background` controls `g:ayucolor`, but `g:ayucolor` doesn't control `background`
+let g:ayucolor="mirage" " for mirage version of theme
+let g:ayucolor="dark"   " for dark version of theme
+" NOTE: g:ayucolor will default to 'dark' when not set.
+colorscheme ayu
 
 endif
