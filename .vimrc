@@ -4,6 +4,8 @@
 let mapleader = " "
 let maplocalleader = "\\"
 
+color industry
+
 "" Options
 set timeoutlen=300
 set clipboard=unnamed,unnamedplus
@@ -214,3 +216,51 @@ if exists("g:neovide")
   " let g:neovide_cursor_antialiasing = v:false  "" Disabling may fix some cursor visual issues.
 endif
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Vim-Plug
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""  Use this for Windows installation
+"" iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | ni $HOME/vimfiles/autoload/plug.vim -Force
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" auto install vim-plug
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("unix") && !has("nvim")
+  let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+  if empty(glob(data_dir . '/autoload/plug.vim'))
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
+endif
+
+
+if !has("nvim")
+call plug#begin()
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" List your plugins here
+
+Plug 'tpope/vim-sensible'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+
+Plug 'nvim-tree/nvim-web-devicons'
+" Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+
+"" Delete buffers and close files in Vim without closing your windows or messing up your layout.
+Plug 'https://github.com/moll/vim-bbye'
+
+call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" nerdtree config
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+"" bufferline config
+"set termguicolors
+"lua << EOF
+"require"bufferline".setup{}
+"EOF
+
+endif
