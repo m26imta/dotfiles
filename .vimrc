@@ -4,7 +4,7 @@
 let mapleader = " "
 let maplocalleader = "\\"
 
-color industry
+silent! colorscheme habamax
 
 "" Options
 set timeoutlen=300
@@ -275,6 +275,6 @@ set background=dark     " for either mirage or dark version.
 let g:ayucolor="mirage" " for mirage version of theme
 let g:ayucolor="dark"   " for dark version of theme
 " NOTE: g:ayucolor will default to 'dark' when not set.
-colorscheme ayu
+silent! colorscheme ayu
 
 endif
