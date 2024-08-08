@@ -4,7 +4,8 @@
 let mapleader = " "
 let maplocalleader = "\\"
 
-silent! colorscheme habamax
+color industry
+silent! color habamax
 
 "" Options
 set timeoutlen=300
@@ -73,8 +74,8 @@ nnoremap ~ :b#<CR>
 "" Move around text in InsertMode & CommandMode
 noremap! <C-j> <Nop>
 noremap! <C-k> <Nop>
-cnoremap <C-j> <UP>
-cnoremap <C-k> <DOWN>
+cnoremap <C-j> <DOWN>
+cnoremap <C-k> <UP>
 noremap! <C-h> <LEFT>
 noremap! <C-l> <RIGHT>
 
@@ -271,10 +272,10 @@ let g:NERDTreeMapJumpParent = 'h'
 
 "" ayu-theme
 set termguicolors       " enable true colors support
-set background=light    " for light version of theme
+""set background=light    " for light version of theme
 set background=dark     " for either mirage or dark version.
 " NOTE: `background` controls `g:ayucolor`, but `g:ayucolor` doesn't control `background`
-let g:ayucolor="mirage" " for mirage version of theme
+""let g:ayucolor="mirage" " for mirage version of theme
 let g:ayucolor="dark"   " for dark version of theme
 " NOTE: g:ayucolor will default to 'dark' when not set.
 silent! colorscheme ayu
