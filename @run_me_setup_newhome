@@ -11,7 +11,8 @@ ln -sf "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$SCRIPT_DIR/.mybashrc" "$HOME/.mybashrc"
 ln -sf "$SCRIPT_DIR/.gitconfig" "$HOME/.gitconfig"
 echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.bashrc"
-[ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
+#[ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
+[ -f "$HOME/.zshrc" ] && echo -e '[[ -f "$HOME/.mybashrc" ]] && . "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
 
 mkdir -p "$HOME/.config" 2>&1 >/dev/null
 cp -rfT "$SCRIPT_DIR/.local" "$HOME/.local"
