@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# kiem tra zsh
+if ! command -v cargo &>/dev/null; then
+  curl https://sh.rustup.rs -sSf | sh
+fi
+
+echo 'source "$HOME/.cargo/env"' >> ~/.bashrc
+echo 'source "$HOME/.cargo/env"' >> ~/.zshrc

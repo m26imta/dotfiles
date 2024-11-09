@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# kiem tra zsh
+if ! command -v zsh &>/dev/null; then
+  command -v apt && sudo apt install -y zsh
+  command -v pacman && sudo pacman -Sy zsh
+fi
+
+echo "change shell to zsh? "
+chsh -s $(which zsh)
+
+# install ohmyzsh
+git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
+
+# backup .zshrc
+mv -f ~/.zshrc ~/.zshrc_bak &> /dev/null
+[ -f ~/.oh-my-zsh/templates/zshrc.zsh-template ] && cp -f ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+
+# plugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sed -i 's/ZSH_THEME=".*"/ZSH_THEME="eastwood"/g' $HOME/.zshrc
+sed -i 's/# export PATH=$HOME\/bin:\/usr\/local\/bin:$PATH/export PATH=$HOME\/bin:\/usr\/local\/bin:$PATH/g' $HOME/.zshrc
+sed -i 's/plugins=(git)/plugins=(git zsh-syntax-highlighting zsh-autosuggestions)/g' $HOME/.zshrc
+echo '[[ -f "$HOME/.mybashrc" ]] && . "$HOME/.mybashrc"' >> $HOME/.zshrc
+
+echo "zsh installed success"

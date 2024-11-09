@@ -10,9 +10,19 @@ ln -sf "$SCRIPT_DIR/.vimrc" "$HOME/.vimrc"
 ln -sf "$SCRIPT_DIR/.tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$SCRIPT_DIR/.mybashrc" "$HOME/.mybashrc"
 ln -sf "$SCRIPT_DIR/.gitconfig" "$HOME/.gitconfig"
-echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.bashrc"
-#[ -f "$HOME/.zshrc" ] && echo -e '. "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
-[ -f "$HOME/.zshrc" ] && echo -e '[[ -f "$HOME/.mybashrc" ]] && . "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
+echo '. "$HOME/.mybashrc"' >> "$HOME/.bashrc"
+
+#zsh
+sh $SCRIPT_DIR/scripts/install_zsh
+#[ -f "$HOME/.zshrc" ] && echo '. "$HOME/.mybashrc"\n' >> "$HOME/.zshrc"
+[ -f "$HOME/.zshrc" ] && echo '[[ -f "$HOME/.mybashrc" ]] && . "$HOME/.mybashrc"' >> "$HOME/.zshrc"
+
+#cargo
+sh $SCRIPT_DIR/scripts/install_cargo
+
+#golang
+sh $SCRIPT_DIR/scripts/install_golang
+
 
 mkdir -p "$HOME/.config" 2>&1 >/dev/null
 cp -rfT "$SCRIPT_DIR/.local" "$HOME/.local"

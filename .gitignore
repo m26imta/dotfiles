@@ -6,6 +6,7 @@
 !/.inputrc
 !/.gitconfig
 !/@run_me_setup_newhome
+!/install_zsh
 
 !/bin
 !/scripts
