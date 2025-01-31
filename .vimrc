@@ -74,10 +74,16 @@ nnoremap ~ :b#<CR>
 "" Move around text in InsertMode & CommandMode
 noremap! <C-j> <Nop>
 noremap! <C-k> <Nop>
-cnoremap <C-j> <DOWN>
-cnoremap <C-k> <UP>
-noremap! <C-h> <LEFT>
-noremap! <C-l> <RIGHT>
+noremap! <C-h> <Nop>
+noremap! <C-l> <Nop>
+" cnoremap <C-j> <DOWN>
+" cnoremap <C-k> <UP>
+" noremap! <C-h> <LEFT>
+" noremap! <C-l> <RIGHT>
+cnoremap <A-j> <DOWN>
+cnoremap <A-k> <UP>
+noremap! <A-h> <LEFT>
+noremap! <A-l> <RIGHT>
 
 "" Better move through wrap line
 noremap j g<DOWN>
@@ -108,26 +114,28 @@ vnoremap <S-l> >gv
 vnoremap <S-j> :m '>+1<cr>gv=gv
 vnoremap <S-k> :m '<-2<cr>gv=gv
 
-nnoremap <A-j> :m .+1<cr>==
-nnoremap <A-k> :m .-2<cr>==
-inoremap <A-j> <ESC>:m .+1<cr>==gi
-inoremap <A-k> <ESC>:m .-2<cr>==gi
-vnoremap <A-j> :m '>+1<cr>gv=gv
-vnoremap <A-k> :m '<-2<cr>gv=gv
-
-nnoremap <A-,> :m .+1<cr>==
-nnoremap <A-.> :m .-2<cr>==
-inoremap <A-,> <ESC>:m .+1<cr>==gi
-inoremap <A-.> <ESC>:m .-2<cr>==gi 
-vnoremap <A-,> :m '>+1<cr>gv=gv
-vnoremap <A-.> :m '<-2<cr>gv=gv
-
-nnoremap <A-h> v<
-nnoremap <A-l> v>
-inoremap <A-h> <ESC>v<gi
-inoremap <A-l> <ESC>v>gi
-vnoremap <A-h> <gv
-vnoremap <A-l> >gv
+""""
+" nnoremap <A-j> :m .+1<cr>==
+" nnoremap <A-k> :m .-2<cr>==
+" inoremap <A-j> <ESC>:m .+1<cr>==gi
+" inoremap <A-k> <ESC>:m .-2<cr>==gi
+" vnoremap <A-j> :m '>+1<cr>gv=gv
+" vnoremap <A-k> :m '<-2<cr>gv=gv
+"
+" nnoremap <A-,> :m .+1<cr>==
+" nnoremap <A-.> :m .-2<cr>==
+" inoremap <A-,> <ESC>:m .+1<cr>==gi
+" inoremap <A-.> <ESC>:m .-2<cr>==gi 
+" vnoremap <A-,> :m '>+1<cr>gv=gv
+" vnoremap <A-.> :m '<-2<cr>gv=gv
+"
+" nnoremap <A-h> v<
+" nnoremap <A-l> v>
+" inoremap <A-h> <ESC>v<gi
+" inoremap <A-l> <ESC>v>gi
+" vnoremap <A-h> <gv
+" vnoremap <A-l> >gv
+""""
 
 "" Ctrl+A to select all
 nnoremap <C-a> maggVG
