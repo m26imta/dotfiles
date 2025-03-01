@@ -36,6 +36,9 @@ map <c-f> <Nop>
 map <c-b> <Nop>
 map <s-j> <Nop>
 
+"" Enter Visual-Block mode
+vnoremap <C-\> <C-V>
+
 "" Toggle wrap, listchars & relativenumber
 map <F5> :set relativenumber!<CR>
 map <F7> :set wrap!<CR>:set wrap?<CR>
