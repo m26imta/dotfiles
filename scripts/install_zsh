@@ -13,7 +13,7 @@ chsh -s $(which zsh)
 git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
 
 # backup .zshrc
-mv -f ~/.zshrc ~/.zshrc_bak &> /dev/null
+[ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc_bak
 [ -f ~/.oh-my-zsh/templates/zshrc.zsh-template ] && cp -f ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 # plugins
