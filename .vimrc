@@ -160,6 +160,8 @@ nnoremap <C-f> <Nop>
 vnoremap <C-f> y<ESC>/<C-r>"<CR>
 vnoremap <C-r> <Nop>
 vnoremap <C-r><C-e> "hy:%s/<C-r>h//gc<LEFT><LEFT><LEFT>
+nnoremap gb :ls<CR>:b<SPACE>
+nnoremap gr yiw:%s/<C-r>0//g<LEFT><LEFT>
 
 "" Status line
 if &statusline==""
@@ -232,8 +234,11 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" Vim-Plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""  Use this for Windows installation
+""   Install vim-plug on Windows
+""   Run this in PowerShell
 "" iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | ni $HOME/vimfiles/autoload/plug.vim -Force
+""   OR 
+"" iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" auto install vim-plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
